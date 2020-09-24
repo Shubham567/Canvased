@@ -14,17 +14,13 @@ import {drawGrid} from "../functions/GridFunctions";
 const ChapterTwo = () => {
     const canvasRef = useRef();
 
-    const maxWidth = 600;
+    const maxWidth = 800;
     const maxHeight = 600;
 
     useEffect(() => {
         let canvas = canvasRef.current;
 
         let ctx = canvas.getContext('2d');
-        // ctx.fillStyle = "rgb(20,50,90)";
-        // ctx.fillRect(10,10,50,50);
-        // ctx.fillStyle = "rgba(200,70,70,0.7)";
-        // ctx.fillRect(20,20,50,50);
         ctx.fillStyle = "rgb(255,255,255)";
         ctx.fillRect(0,0,maxHeight,maxWidth);
         ctx.fillStyle = "rgba(0,138,150,0.7)";
@@ -32,8 +28,8 @@ const ChapterTwo = () => {
 
         let x = 0;
         let y = 0;
-        let rW = 25;
-        let rH = 15;
+        let rW = 10;
+        let rH = 10;
 
         ctx.strokeStyle = getRandomColorWithA(0.5);
 
@@ -42,7 +38,7 @@ const ChapterTwo = () => {
         setInterval(() => {
             ctx.clearRect(0,0,maxWidth,maxHeight);
             drawGrid(ctx,maxWidth,maxHeight,rW,rH,x,y,1,(px,py) => {
-            ctx.fillStyle = getRandomColorWithA(0.7);
+            ctx.fillStyle = getRandomColorWithA(1);
             ctx.fillRect(px,py,rW,rH);
             });
 
