@@ -26,6 +26,11 @@ const components = [
         fileName : "ChapterThree",
         link : "chapterThree",
     },
+    {
+        title : "Chapter Four",
+        fileName : "ChapterFour",
+        link : "chapterFour",
+    },
 ];
 
 

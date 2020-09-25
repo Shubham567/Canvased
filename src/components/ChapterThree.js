@@ -3,7 +3,7 @@ import {Col, Container, Row} from "reactstrap";
 import {getRGBAString} from "../functions/ColorFunctions";
 import {drawGrid, getGridCenter} from "../functions/GridFunctions";
 
-export const ChapterThree = () => {
+const ChapterThree = () => {
     const canvasRef = useRef();
 
     const maxWidth = 600;
@@ -22,28 +22,15 @@ export const ChapterThree = () => {
         ctx.strokeStyle = getRGBAString(30,30,30,0.7);
         ctx.beginPath();
 
-        // for(let i = 0; i < 40; i++){
-        //     let randBox = gridPos[Math.floor(Math.random()*gridPos.length)];
-        //     let center = getGridCenter(randBox.x,randBox.y,gridSize,gridSize);
-        //     ctx.lineTo(center.x,center.y);
-        // }
-
-        let c = 0;
-        let interval = setInterval(()=> {
+        for(let i = 0; i < 10; i++){
             let randBox = gridPos[Math.floor(Math.random()*gridPos.length)];
             let center = getGridCenter(randBox.x,randBox.y,gridSize,gridSize);
             ctx.lineTo(center.x,center.y);
-            ctx.stroke();
-            c++;
-            if(c > 10){
-                clearInterval(interval);
-            }
-        },200);
+        }
 
-
-
-
-
+        ctx.stroke();
+        ctx.closePath();
+        ctx.fill();
 
     }, []);
 

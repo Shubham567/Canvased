@@ -1,4 +1,4 @@
-export const PosToArray = (pos,width,height) => {
+export const posToArray = (pos,width,height) => {
     let ci = 0;
     let arr = [];
     for (let i = 0; i < height; i++){
@@ -8,5 +8,6 @@ export const PosToArray = (pos,width,height) => {
         }
         arr.push(subArr);
     }
+    let tmpArr = [];
     return arr;
 }
