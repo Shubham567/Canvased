@@ -22,7 +22,7 @@ const ChapterThree = () => {
         ctx.strokeStyle = getRGBAString(30,30,30,0.7);
         ctx.beginPath();
 
-        for(let i = 0; i < 10; i++){
+        for(let i = 0; i < 15; i++){
             let randBox = gridPos[Math.floor(Math.random()*gridPos.length)];
             let center = getGridCenter(randBox.x,randBox.y,gridSize,gridSize);
             ctx.lineTo(center.x,center.y);

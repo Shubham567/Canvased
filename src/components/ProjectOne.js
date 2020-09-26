@@ -6,7 +6,7 @@ import {posToArray} from "../functions/ArrayFunctions";
 import {DoBFS} from "../functions/GridDFS";
 
 
-const ChapterFour = () => {
+const ProjectOne = () => {
     const canvasRef = useRef();
 
     const maxWidth = 600;
@@ -100,7 +100,7 @@ const ChapterFour = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h4>Chapter 4 - Shortest Path</h4>
+                        <h4>Project - Shortest Path</h4>
                     </Col>
                 </Row>
                 <Row>
@@ -116,4 +116,4 @@ const ChapterFour = () => {
 
 }
 
-export default ChapterFour;
+export default ProjectOne;

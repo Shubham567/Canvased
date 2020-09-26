@@ -12,6 +12,11 @@ const RootPage = React.lazy(() => import("./components/RootPage"));
 
 const components = [
     {
+        title : "Scribble Pad",
+        fileName : "ScribblePad",
+        link : "scribble",
+    },
+    {
         title : "Chapter One",
         fileName : "ChapterOne",
         link : "chapterOne",
@@ -27,9 +32,9 @@ const components = [
         link : "chapterThree",
     },
     {
-        title : "Chapter Four",
-        fileName : "ChapterFour",
-        link : "chapterFour",
+        title : "Project 1",
+        fileName : "ProjectOne",
+        link : "projectOne",
     },
 ];
 

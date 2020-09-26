@@ -8,6 +8,6 @@ export const posToArray = (pos,width,height) => {
         }
         arr.push(subArr);
     }
-    let tmpArr = [];
+
     return arr;
 }
