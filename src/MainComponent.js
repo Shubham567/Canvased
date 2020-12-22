@@ -36,6 +36,12 @@ const components = [
         fileName : "ProjectOne",
         link : "projectOne",
     },
+    {
+        title : "Chapter Four",
+        fileName : "Acceleration",
+        link : "acceleration",
+    },
+
 ];
 
 
