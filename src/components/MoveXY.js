@@ -13,13 +13,13 @@ const MoveXY = () => {
     const maxWidth = 600;
     const maxHeight = 600;
 
-    let initX = 0;
-    let initY = 0;
+    let initX = Math.floor(Math.random() * maxWidth);
+    let initY = Math.floor(Math.random() * maxHeight);
 
     let gravity = 5;
 
-    let vX = 20;
-    let vY = 50;
+    let vX = Math.floor(Math.random() * maxWidth / 10);
+    let vY = Math.floor(Math.random() * maxHeight / 10);
 
     let interval;
 
