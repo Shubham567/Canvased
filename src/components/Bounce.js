@@ -5,37 +5,46 @@ import {
     Col,
 } from 'reactstrap';
 
-const Acceleration = () => {
+const Bounce = () => {
     const canvasRef = useRef();
 
-    const maxWidth = 600;
-    const maxHeight = 850;
+    let startTime;
 
-    let top = 0;
+    const maxWidth = 600;
+    const maxHeight = 600;
+
+    let init = 0;
     let gravity = 5;
+
+    let velocity = 50;
 
     let interval;
 
-    const radius = 20;
+    const radius = 10;
 
-    const drawAcceleration = (ctx,startTime) => {
-        let elapseTime = new Date().getTime() - startTime;
+    const drawAcceleration = (ctx) => {
+        let elapseTime = (new Date().getTime() - startTime)/100;
 
-        let pos = top+(gravity*(elapseTime/100)**2)/2;
+        let pos = init + velocity*elapseTime;
         ctx.clearRect(0, 0, maxWidth, maxHeight);
         ctx.fillStyle = "rgba(0,138,150,0.7)";
 
         ctx.beginPath();
         ctx.arc(maxWidth/2 - radius, pos, radius, 0, 2 * Math.PI);
         ctx.closePath();
+        ctx.strokeStyle = "#af1f00";
         ctx.stroke();
         ctx.fill();
 
-
-        // gravity+= gravity+1;
-
-        if(pos+radius > maxHeight){
-            clearInterval(interval);
+        if(pos > maxHeight){
+            init = maxHeight;
+            velocity = -velocity;
+            startTime = new Date().getTime();
+        }
+        else if(pos < 0){
+            init = 0;
+            velocity = -velocity;
+            startTime = new Date().getTime();
         }
     }
 
@@ -46,10 +55,10 @@ const Acceleration = () => {
         let ctx = canvas.getContext('2d');
 
         // ctx.fillStyle = "rgb(255,255,255)";
-        let time = new Date().getTime();
+        startTime = new Date().getTime();
         interval = setInterval(() => {
-            window.requestAnimationFrame(() => drawAcceleration(ctx,time));
-        }, 1);
+            window.requestAnimationFrame(() => drawAcceleration(ctx));
+        }, 10);
 
 
     }, []);
@@ -60,7 +69,7 @@ const Acceleration = () => {
         <React.Fragment>
             <Row>
                 <Col>
-                    <h4>Chapter 4 - Acceleration</h4>
+                    <h4>Chapter 5 - Basic Bounce</h4>
                 </Col>
             </Row>
             <Row>
@@ -75,4 +84,4 @@ const Acceleration = () => {
     )
 }
 
-export default Acceleration;
+export default Bounce;

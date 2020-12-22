@@ -12,7 +12,7 @@ const Sidebar = props => {
     let data = props.links;
 
 
-    let navItems = data.map((d,i) => <NavItem key={i} className="pl-3"><Link to={d.link} className="text-light"><Button block color="dark"> {d.title} </Button></Link></NavItem>);
+    let navItems = data.map((d,i) => <NavItem key={i} className="pl-3"><Link to={d.link} className="text-light"><Button block className=" text-left" color="dark"> {d.title} </Button></Link></NavItem>);
 
     return(
         <React.Fragment>

@@ -41,6 +41,16 @@ const components = [
         fileName : "Acceleration",
         link : "acceleration",
     },
+    {
+        title : "Chapter Five",
+        fileName : "Bounce",
+        link : "bounce",
+    },
+    {
+        title : "Chapter Six",
+        fileName : "MoveXY",
+        link : "moveXY",
+    },
 
 ];
 
@@ -48,7 +58,7 @@ const components = [
 
 const MainComponent = () => {
 
-    const routes = components.map((c,i) => <Route key={i} exact path={"/"+c.link} component={React.lazy(()=> import("./components/"+c.fileName))} /> );
+    const routes = components.map((c,i) => <Route key={c.link} exact path={"/"+c.link} component={React.lazy(()=> import("./components/"+c.fileName))} /> );
 
 
     return (
