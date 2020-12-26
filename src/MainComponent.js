@@ -51,6 +51,11 @@ const components = [
         fileName : "MoveXY",
         link : "moveXY",
     },
+    {
+        title : "Project 2",
+        fileName : "ProjectileMotion",
+        link : "projectile",
+    },
 
 ];
 

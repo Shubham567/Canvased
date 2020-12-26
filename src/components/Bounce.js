@@ -16,7 +16,7 @@ const Bounce = () => {
     let init = 0;
     let gravity = 5;
 
-    let velocity = 50;
+    let velocity = 30;
 
     let interval;
 
