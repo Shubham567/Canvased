@@ -17,44 +17,49 @@ const components = [
         link : "scribble",
     },
     {
-        title : "Chapter One",
+        title : "Ch 1: Drawing Shapes",
         fileName : "ChapterOne",
         link : "chapterOne",
     },
     {
-        title : "Chapter Two",
+        title : "Ch 2: Old Tv",
         fileName : "ChapterTwo",
         link : "chapterTwo",
     },
     {
-        title : "Chapter Three",
+        title : "Ch 3: Random Drawing",
         fileName : "ChapterThree",
         link : "chapterThree",
     },
     {
-        title : "Project 1",
+        title : "Pr 1: Shortest Path",
         fileName : "ProjectOne",
         link : "projectOne",
     },
     {
-        title : "Chapter Four",
+        title : "Ch 4: Acceleration",
         fileName : "Acceleration",
         link : "acceleration",
     },
     {
-        title : "Chapter Five",
+        title : "Ch 5: Bounce",
         fileName : "Bounce",
         link : "bounce",
     },
     {
-        title : "Chapter Six",
+        title : "Ch 6: Multi Axes Movement",
         fileName : "MoveXY",
         link : "moveXY",
     },
     {
-        title : "Project 2",
+        title : "Pr 2: Projectile Motion",
         fileName : "ProjectileMotion",
         link : "projectile",
+    },
+    {
+        title : "Ch 7: Multiple Balls",
+        fileName : "Multiple Balls",
+        link : "multiple-balls",
     },
 
 ];

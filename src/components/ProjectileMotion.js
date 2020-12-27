@@ -19,11 +19,15 @@ const ProjectileMotion = () => {
     let gravity = 10;
 
     let vX = 40;
-    let vY = -80;
+    let vY = -50;
 
     let interval;
 
-    let resist = 0.98;
+    let coeffOfRestX = -0.01;
+    let coeffOfRestY = 0.0;
+
+    let resistX = 1.0 - coeffOfRestX;
+    let resistY = 1.0 - coeffOfRestY;
 
     const radius = 10;
 
@@ -41,26 +45,26 @@ const ProjectileMotion = () => {
         if(posY + radius >= maxHeight){
             initY = maxHeight - radius;
             initX = posX;
-            vY = -(vY + gravity*elapseTime)*resist;
+            vY = -(vY + gravity*elapseTime)*resistY;
             startTime = new Date().getTime();
         }
         else if(posY - radius <= 0){
             initY = 0 + radius;
             initX = posX;
-            vY = -(vY + gravity*elapseTime)*resist;
+            vY = -(vY + gravity*elapseTime)*resistY;
             startTime = new Date().getTime();
         }
         if(posX + radius >= maxWidth){
             initX = maxWidth - radius;
             initY = posY;
-            vX = -vX*resist;
+            vX = -vX*resistX;
             vY = (vY + gravity*elapseTime);
             startTime = new Date().getTime();
         }
         else if(posX  - radius <= 0){
             initX = 0 + radius;
             initY = posY;
-            vX = -vX*resist;
+            vX = -vX*resistX;
             vY = (vY + gravity*elapseTime);
             startTime = new Date().getTime();
         }
